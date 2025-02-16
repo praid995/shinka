@@ -6,118 +6,119 @@
     <title>Шиномонтаж+Автосервис Новоасбест</title>
     <style>
         body {
-            font-family: Arial, sans-serif; /* Простой и читабельный шрифт */
+            font-family: Arial , sans-serif; /* Установим Arial  или другой простой шрифт, можно изменить */
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4; /* Светло-серый фон */
-            color: #333; /* Темно-серый текст */
+            background-image: url('rims-pattern.jpg');
+            background-repeat: repeat;
+            background-color: #f5f0e1;
+            color: #333;
         }
 
         .container {
-            width: 80%; /* Ширина контента 80% экрана, центрирование */
+            width: 80%;
             margin: auto;
-            overflow: hidden; /* Чтобы дочерние блоки не вылезали за пределы */
+            overflow: hidden;
+            background-color: rgba(255, 255, 255, 0.0); /* Фон контейнера делаем полностью прозрачным, т.к. полоса будет внутри hero */
+            padding: 0; /* Убираем отступы у контейнера, чтобы полоса прилегала к краям */
+            box-shadow: none; /* Убираем тень контейнера */
         }
 
-        header {
-            background: #333; /* Темно-серая шапка */
-            color: white; /* Белый текст в шапке */
-            padding-top: 20px;
-            padding-bottom: 20px;
-            border-bottom: 3px solid #e8491d; /* Оранжевая полоса снизу шапки (можно автомобильный цвет) */
+               #hero {
+            background: url('tire-pattern.jpg') no-repeat center center/cover; /* Фоновое изображение */
+            text-align: center; /* Центрирование содержимого по горизонтали */
+            padding: 60px 0 40px 0; /* Верхний и нижний отступы */
         }
 
-        header .logo img {
-            width: 100px; /* Размер логотипа (нужно будет подправить) */
-            float: left;
-            margin-right: 20px;
+        .hero-container {
+            background-color: rgba(255, 255, 255, 0.75); /* Белый полупрозрачный фон для всего блока hero */
+            padding: 30px 20px; /* Отступы внутри белого блока */
+            border-radius: 10px; /* Закругление углов белого блока */
+            width: 80%; /* Ширина белого блока, можно настроить */
+            max-width: 700px; /* Максимальная ширина белого блока */
+            margin: 0 auto; /* Центрирование белого блока по горизонтали */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Тень для белого блока */
         }
 
-        header h1 {
-            margin: 0;
-            float: left; /* Заголовок слева от логотипа */
+        .logo-header {
+            margin-bottom: 18px; /* Отступ снизу от логотипа */
         }
 
-        header nav {
-            float: right; /* Навигация справа (пока нет ссылок) */
-            margin-top: 10px;
-        }
-
-        header nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        header nav li {
-            display: inline; /* Горизонтальное меню (пока 1 пункт) */
-            padding: 0 20px 0 20px;
-        }
-
-        header nav li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        #hero {
-            background: url('tire-pattern.jpg') no-repeat center center/cover; /* Фоновое изображение - протектор шины (нужно добавить tire-pattern.jpg или заменить на другое) */
-            text-align: center;
-            padding: 100px 0;
-            color: white;
+        .logo-header img {
+            width: 125px; /* Размер логотипа */
+            display: block; /* Чтобы центрировать логотип */
+            margin: 0 auto; /* Центрирование логотипа по горизонтали */
         }
 
         #hero h2 {
-            font-size: 3em;
+            font-size: 2.3em; /* Размер заголовка */
             margin-bottom: 15px;
+            color: #d3200b;
+            line-height: 1.2em;
+			text-shadow: 2px 2px 4px #666;
         }
 
         #hero p {
-            font-size: 1.2em;
+            font-size: 1.1em;
             line-height: 1.6em;
+            color: #000;
+            margin-bottom: 25px; /* Отступ снизу от девиза */
         }
+
+        .map-widget {
+            text-align: center; /* Центрирование карты */
+        }
+
+        .map-widget iframe {
+            width: 100%; /* Карта на всю ширину белого блока */
+            max-width: 100%; /* Чтобы карта не была шире контейнера */
+            height: 350px; /* Высота карты */
+            border: none;
+        }
+
 
         section {
             padding: 40px 0;
-            background: #fff; /* Белый фон для секций контента */
-            border-bottom: 1px solid #ccc; /* Серая разделительная линия между секциями */
+            background: #fff8f0;
+            border-bottom: 1px solid #ccc;
         }
 
         section h2 {
             text-align: center;
             margin-bottom: 30px;
-            color: #e8491d; /* Оранжевый заголовок секций */
+            color: #d3200b; /* Цвет d3200b для подзаголовков секций */
         }
 
         section h3 {
-            color: #333; /* Темно-серый подзаголовок */
+            color: #d3200b; /* Цвет d3200b для подзаголовков внутри секций */
             margin-top: 20px;
             margin-bottom: 10px;
         }
 
         .services-list {
-            list-style: none; /* Убираем маркеры списка */
+            list-style: none;
             padding: 0;
         }
 
         .services-list li {
             padding: 10px 0;
-            border-bottom: 1px dashed #ccc; /* Пунктирная линия между элементами списка */
+            border-bottom: 1px dashed #ccc;
         }
 
         .price-table {
             width: 100%;
-            border-collapse: collapse; /* Убираем двойные границы таблицы */
+            border-collapse: collapse;
             margin-top: 20px;
         }
 
         .price-table th, .price-table td {
-            border: 1px solid #ddd; /* Тонкая серая граница ячеек таблицы */
+            border: 1px solid #ddd;
             padding: 8px;
             text-align: left;
         }
 
         .price-table th {
-            background-color: #f0f0f0; /* Светло-серый фон для заголовков таблицы */
+            background-color: #f0e6da;
             font-weight: bold;
         }
 
@@ -131,234 +132,299 @@
         }
 
         footer {
-            background: #333; /* Темно-серый фон подвала */
-            color: white; /* Белый текст подвала */
+            color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет для футера */
             text-align: center;
             padding: 20px;
             margin-top: 40px;
         }
 
-        /* Цвета в коричневой гамме (можно заменить на более подходящие) */
-        /* Коричневый для акцентов, белый/светло-коричневый для фона */
-        body {background-color: #f5f0e1;} /* Светлый бежевый фон */
-        header {background: #d4a373;} /* Светло-коричневый шапка */
-        header {border-bottom-color: #e56b6f;} /*  Красно-коричневая полоса  */
-        section {background: #fff8f0;} /* Бежевый фон секций */
-        section h2 {color: #e56b6f;} /* Красно-коричневые заголовки секций */
-        .price-table th {background-color: #f0e6da;} /* Светло-бежевый фон заголовков таблицы */
-        footer {background: #d4a373;} /* Светло-коричневый подвал */
+        body {background-color: #f5f0e1;}
+        section {background: #fff8f0;}
+        .price-table th {background-color: #f0e6da;}
 
-        /* Элементы дизайна "протектор"  -  можно доработать или добавить другие фоновые изображения, иконки */
-        #hero {
-            background-image: url('tire-pattern.jpg'); /*  Нужно добавить или заменить на реальное изображение протектора */
-            background-size: cover; /* Покрытие фоном всего блока */
-            background-position: center; /* Центрирование фона */
+
+        #additional-services .additional-service-block {
+            margin-bottom: 30px;
         }
+
+        #additional-services .additional-service-block h3 {
+            color: #d3200b; /* Цвет d3200b для подзаголовков доп. услуг */
+            border-bottom: 2px solid #d3200b;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        #additional-services .additional-service-block ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        #additional-services .additional-service-block li {
+            padding: 5px 0;
+        }
+
+         #additional-services .important-note {
+            font-style: italic;
+            color: #777;
+            margin-top: 15px;
+        }
+		.contact-button {
+    background-color: white; /* Белый фон кнопки */
+    color: #333; /* Темно-серый текст кнопки */
+    padding: 10px 20px; /* Отступы внутри кнопки (верх/низ, лево/право) */
+    border-radius: 5px; /* Закругление углов кнопки */
+    text-decoration: none; /* Убираем подчеркивание ссылки */
+    display: inline-block; /* Чтобы кнопка вела себя как блочный элемент в строке */
+    margin-left: 580px; /* Отступ слева от заголовка/логотипа */
+    border: 1px solid #ccc; /* Тонкая серая рамка, чтобы окошко было виднее */
+}
+
+.contact-button:hover {
+    background-color: #f0f0f0; /* Более светло-серый фон при наведении курсора */
+}
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="Логотип Шиномонтаж+Автосервис">  <!-- Предполагается, что logo.png в той же папке -->
+    <div class="container">
+        <section id="hero">
+    <div class="hero-container"> <!-- Новый контейнер для белого фона и внутреннего содержимого -->
+        <div class="logo-header">
+            <ui><a href="#contacts" class="contact-button">Контакты</a></ui>
+			<img src="logo.png" alt="Логотип Шиномонтаж+Автосервис">
+        </div>
+		
+        <h2>Качественный Шиномонтаж<br>и Автосервис в Новоасбесте!</h2>
+        <p>Быстро, надежно, профессионально. Все виды шиномонтажных и автосервисных услуг для легковых автомобилей.</p>
+        <div class="map-widget">
+            <div style="position:relative;overflow:hidden;">
+                <a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a>
+                <a href="https://yandex.ru/maps/11162/sverdlovsk-oblast/house/ulitsa_mikrorayon_g_50/YkkYdAJoQEAEQFttfXt1c3lqZg==/?ll=60.259687%2C57.742952&utm_medium=mapframe&utm_source=maps&z=17.63" style="color:#eee;font-size:12px;position:absolute;top:14px;">Улица Микрорайон Г, 50 — Яндекс Карты</a>
+                <iframe src="https://yandex.ru/map-widget/v1/?ll=60.259687%2C57.742952&mode=whatshere&whatshere%5Bpoint%5D=60.258917%2C57.742571&whatshere%5Bzoom%5D=17&z=17.63" width="560" height="400" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
             </div>
-            <h1>Шиномонтаж+Автосервис Новоасбест</h1>
-            <nav>
-                <ul>
-                    <li><a href="#contacts">Контакты</a></li> <!-- Пока только якорь на раздел контактов -->
-                </ul>
-            </nav>
+			  <p><strong>Телефон/WhatsApp:</strong> <a href="https://wa.me/79222056393">8-922-205-63-93</a> Александр</p>
         </div>
-    </header>
+    </div>
+</section>
 
-    <section id="hero">
-        <div class="container">
-            <h2>Качественный Шиномонтаж и Автосервис в Новоасбесте!</h2>
-            <p>Быстро, надежно, профессионально. Все виды шиномонтажных и автосервисных услуг для легковых автомобилей.</p>
-            <!-- Можно добавить кнопку "Записаться" или "Узнать цены" -->
-        </div>
-    </section>
+        <section id="services">
+            <div class="container">
+                <h2>Наши Услуги</h2>
 
-    <section id="services">
-        <div class="container">
-            <h2>Наши Услуги</h2>
+                <div id="tire-services">
+                    <h3>Шиномонтаж</h3>
+                    <ul class="services-list">
+                        <li>Комплекс "Стандарт" (R13-R16): <strong>2000 руб.</strong> за 4 колеса</li>
+                        <li>Комплекс "Стандарт" (R17): <strong>2400 руб.</strong> за 4 колеса</li>
+                        <li>Комплекс "Стандарт" (R18): <strong>2800 руб.</strong> за 4 колеса</li>
+                        <li>Балансировка колес (R13-R16, 4 шт.): <strong>1200 руб.</strong></li>
+                        <li>Ремонт прокола: <strong>800 руб.</strong></li>
+                        <li>Сезонное хранение шин: <strong>В зависимости от размерности.</strong></li>
+                        <!-- ... и другие услуги шиномонтажа из прайса -->
+                    </ul>
+                    <a href="#price-list">Посмотреть полный прайс-лист шиномонтажа</a>
+                </div>
 
-            <div id="tire-services">
+                <div id="auto-services">
+                    <h3>Автосервис (Техническое обслуживание)</h3>
+                    <ul class="services-list">
+                        <li>Замена масла в двигателе (без стоимости масла): <strong>1000 руб.</strong></li>
+                        <li>Замена масляного фильтра (без стоимости фильтра): <strong>700 руб.</strong></li>
+                        <li>Замена воздушного фильтра (без стоимости фильтра): <strong>700 руб.</strong></li>
+                        <li>Замена тормозных колодок (передние): <strong>1200 руб./ось</strong></li>
+                        <li>Замена тормозной жидкости (без стоимости жидкости): <strong>1400 руб.</strong></li>
+                        <!-- ... и другие услуги автосервиса - нужно будет добавить из твоего списка -->
+                    </ul>
+                    <a href="#price-list">Посмотреть полный прайс-лист автосервиса</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="additional-services">
+            <div class="container">
+                <h2>Дополнительные Услуги</h2>
+
+                <div class="additional-service-block">
+                    <h3>Химчистка салона автомобиля</h3>
+                    <p>Верните салону автомобиля свежесть и чистоту! Предлагаем комплексную химчистку с применением профессиональных средств.</p>
+                    <h4>Наши услуги:</h4>
+                    <ul>
+                        <li>Тщательная очистка сидений, пола, потолка и дверных карт</li>
+                        <li>Удаление пятен и загрязнений любой сложности</li>
+                        <li>Обработка пластиковых и кожаных элементов салона</li>
+                        <li>Антибактериальная обработка и устранение неприятных запахов</li>
+                        <li>Экспресс-сушка салона для быстрого возвращения к комфортной поездке</li>
+                    </ul>
+                </div>
+
+                <div class="additional-service-block">
+                    <h3>Полировка кузова и защита ЛКП</h3>
+                    <p>Блеск и защита вашего автомобиля! Вернем лакокрасочному покрытию первозданный вид и защитим от негативных воздействий окружающей среды.</p>
+                    <h4>Наши услуги:</h4>
+                    <ul>
+                        <li>Абразивная полировка кузова для устранения царапин и потертостей</li>
+                        <li>Восстановление яркости и глубины цвета</li>
+                        <li>Нанесение защитного гидрофобного покрытия: воска или жидкого стекла</li>
+                        <li>Защита от ультрафиолета, влаги и химических реагентов</li>
+                        <li>Долговременный блеск и легкость в уходе</li>
+                    </ul>
+                </div>
+
+                <div class="additional-service-block">
+                    <h3>Сервис Самообслуживания - Аренда Места</h3>
+                    <p>Для автовладельцев, предпочитающих самостоятельно заниматься обслуживанием и ремонтом своих автомобилей, мы предлагаем уникальную услугу - аренда оборудованного поста автосервиса на почасовой или посуточной основе. В вашем распоряжении будет предоставлен полностью оснащенный пост с необходимым инструментом и оборудованием.</p>
+                </div>
+				
+				 <div class="additional-service-block">
+                    <h3>Автостекло: Ремонт и Замена</h3>
+                    <p>Восстановим безупречную видимость и безопасность вашего автомобиля! Предлагаем полный спектр услуг по ремонту сколов, трещин и замене автостекол. Качество, надежность и гарантия!</p>
+                    <h4>Наши услуги:</h4>
+                    <ul>
+                        <li>Ремонт сколов и трещин</li>
+                        <li>Замена лобового стекла</li>
+                        <li>Замена боковых и задних стекол</li>
+                        <li>Тонирование автостекол (опционально)</li>
+                    </ul>
+                </div>
+
+                 <p class="important-note"><strong>Важно:</strong> Стоимость и детали предоставления услуг (химчистка, полировка, аренда места) оговариваются индивидуально. Для получения подробной информации, уточнения деталей и бронирования, пожалуйста, свяжитесь с нами по телефону, WhatsApp или Telegram.</p>
+                 <p class="important-note"><strong>Условия аренды и доступность сервиса самообслуживания - уточняйте индивидуально!</strong></p>
+                 <p class="important-note"><strong>Контактная информация: см. раздел "Контакты"</strong></p>
+
+            </div>
+        </section>
+
+
+        <section id="price-list">
+            <div class="container">
+                <h2>Прайс-лист</h2>
+
                 <h3>Шиномонтаж</h3>
-                <ul class="services-list">
-                    <li>Комплекс "Стандарт" (R13-R16): <strong>2000 руб.</strong> за 4 колеса</li>
-                    <li>Комплекс "Стандарт" (R17): <strong>2400 руб.</strong> за 4 колеса</li>
-                    <li>Комплекс "Стандарт" (R18): <strong>2800 руб.</strong> за 4 колеса</li>
-                    <li>Балансировка колес (R13-R16, 4 шт.): <strong>1200 руб.</strong></li>
-                    <li>Ремонт прокола: <strong>800 руб.</strong></li>
-                    <li>Сезонное хранение шин: <strong>3200 руб.</strong> за сезон</li>
-                    <!-- ... и другие услуги шиномонтажа из прайса -->
-                </ul>
-                <a href="#price-list">Посмотреть полный прайс-лист шиномонтажа</a> <!-- Ссылка на прайс-лист ниже -->
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Услуга</th>
+                            <th>Цена</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Комплекс "Стандарт" (R13-R16) за 4 колеса</td>
+                            <td>2000 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Комплекс "Стандарт" (R17) за 4 колеса</td>
+                            <td>2400 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Комплекс "Стандарт" (R18) за 4 колеса</td>
+                            <td>2800 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Комплекс "Стандарт" (R19) за 4 колеса</td>
+                            <td>3200 руб.</td>
+                        </tr>
+                         <tr>
+                            <td>Комплекс "Стандарт" (R20) за 4 колеса</td>
+                            <td>3700 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Комплекс "Стандарт" Внедорожники/Кроссоверы/Минивэны (R15-R16) за 4 колеса</td>
+                            <td>2400 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Комплекс "Стандарт" Внедорожники/Кроссоверы/Минивэны (R17) за 4 колеса</td>
+                            <td>2800 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Балансировка колес (R13-R16, 4 шт.)</td>
+                            <td>1200 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Балансировка колес (R17, 4 шт.)</td>
+                            <td>1400 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Балансировка колес (R18, 4 шт.)</td>
+                            <td>1600 руб.</td>
+                        </tr>
+                         <tr>
+                            <td>Балансировка колес (R19, 4 шт.)</td>
+                            <td>1800 руб.</td>
+                        </tr>
+                         <tr>
+                            <td>Балансировка колес (R20, 4 шт.)</td>
+                            <td>2000 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Ремонт прокола (легковой)</td>
+                            <td>800 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Ремонт бокового пореза (легковой)</td>
+                            <td>от 1600 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Сезонное хранение шин (комплект за 6 месяцев)</td>
+                            <td>3200 руб.</td>
+                        </tr>
+                        <!-- ... полный прайс-лист шиномонтажа -->
+                    </tbody>
+                </table>
+
+                 <h3>Автосервис (ТО) </h3>
+                <table class="price-table">
+                    <thead>
+                        <tr>
+                            <th>Услуга</th>
+                            <th>Цена</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Замена масла в двигателе (без стоимости масла)</td>
+                            <td>1000 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Замена масляного фильтра (без стоимости фильтра)</td>
+                            <td>500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Замена воздушного фильтра (без стоимости фильтра)</td>
+                            <td>500 руб.</td>
+                        </tr>
+                        <tr>
+                            <td>Замена тормозных колодок (передние, без стоимости колодок)</td>
+                            <td>1200 руб./ось</td>
+                        </tr>
+                        <tr>
+                            <td>Замена тормозной жидкости (без стоимости жидкости)</td>
+                            <td>1400 руб.</td>
+                        </tr>
+                        <!-- ... полный прайс-лист автосервиса - добавь свой финальный прайс здесь -->
+                    </tbody>
+                </table>
             </div>
+        </section>
 
-            <div id="auto-services">
-                <h3>Автосервис (Техническое обслуживание)</h3>
-                <ul class="services-list">
-                    <li>Замена масла в двигателе (без стоимости масла): <strong>1000 руб.</strong></li>
-                    <li>Замена масляного фильтра (без стоимости фильтра): <strong>700 руб.</strong></li>
-                    <li>Замена воздушного фильтра (без стоимости фильтра): <strong>700 руб.</strong></li>
-                    <li>Замена тормозных колодок (передние): <strong>1200 руб./ось</strong></li>
-                    <li>Замена тормозной жидкости (без стоимости жидкости): <strong>1400 руб.</strong></li>
-                    <!-- ... и другие услуги автосервиса - нужно будет добавить из твоего списка -->
-                </ul>
-                <a href="#price-list">Посмотреть полный прайс-лист автосервиса</a> <!-- Ссылка на прайс-лист ниже -->
+        <section id="contacts">
+            <div class="container">
+                <h2>Контакты</h2>
+                <div id="contacts-info">
+                    <p><strong>Адрес:</strong> п. Новоасбест, микро р-н Г 50</p>
+                    <p><strong>Телефон/WhatsApp:</strong> <a href="https://wa.me/79222056393">8-922-205-63-93</a></p>
+                    <p><strong>График работы:</strong> Сб-Вс - по предварительной записи</p>
+                    <p><strong>Для записи и консультаций - звоните или пишите в WhatsApp!</strong></p>
+                </div>
             </div>
-			            </div> <!-- /#auto-services -->
+        </section>
 
-            <div id="self-service">
-                <h3>Сервис Самообслуживания - Аренда Места</h3>
-                <p>
-                    Для автовладельцев, предпочитающих самостоятельно заниматься обслуживанием и ремонтом своих автомобилей,
-                    мы предлагаем уникальную услугу - аренда оборудованного поста автосервиса на почасовой или посуточной основе.
-                    В вашем распоряжении будет предоставлен полностью оснащенный пост с необходимым инструментом и оборудованием.
-                    Условия аренды и доступное время оговариваются индивидуально.
-                    Для уточнения деталей и бронирования, пожалуйста, свяжитесь с нами по телефону, WhatsApp или Telegram.
-                </p>
-                <p><strong>Условия аренды и доступность - уточняйте индивидуально!</strong><br>
-                   Контактная информация: <a href="#contacts">см. раздел "Контакты"</a></p>
-            </div> <!-- /#self-service -->
-        </div>
-    </section>
-        </div>
-    </section>
-
-    <section id="price-list">
-        <div class="container">
-            <h2>Прайс-лист</h2>
-
-            <h3>Шиномонтаж</h3>
-            <table class="price-table">
-                <thead>
-                    <tr>
-                        <th>Услуга</th>
-                        <th>Цена</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Комплекс "Стандарт" (R13-R16) за 4 колеса</td>
-                        <td>2000 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Комплекс "Стандарт" (R17) за 4 колеса</td>
-                        <td>2400 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Комплекс "Стандарт" (R18) за 4 колеса</td>
-                        <td>2800 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Комплекс "Стандарт" (R19) за 4 колеса</td>
-                        <td>3200 руб.</td>
-                    </tr>
-                     <tr>
-                        <td>Комплекс "Стандарт" (R20) за 4 колеса</td>
-                        <td>3700 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Комплекс "Стандарт" Внедорожники/Кроссоверы/Минивэны (R15-R16) за 4 колеса</td>
-                        <td>2400 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Комплекс "Стандарт" Внедорожники/Кроссоверы/Минивэны (R17) за 4 колеса</td>
-                        <td>2800 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Балансировка колес (R13-R16, 4 шт.)</td>
-                        <td>1200 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Балансировка колес (R17, 4 шт.)</td>
-                        <td>1400 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Балансировка колес (R18, 4 шт.)</td>
-                        <td>1600 руб.</td>
-                    </tr>
-                     <tr>
-                        <td>Балансировка колес (R19, 4 шт.)</td>
-                        <td>1800 руб.</td>
-                    </tr>
-                     <tr>
-                        <td>Балансировка колес (R20, 4 шт.)</td>
-                        <td>2000 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Ремонт прокола (легковой)</td>
-                        <td>800 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Ремонт бокового пореза (легковой)</td>
-                        <td>от 1600 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Сезонное хранение шин (комплект за 6 месяцев)</td>
-                        <td>3200 руб.</td>
-                    </tr>
-                    <!-- ... полный прайс-лист шиномонтажа -->
-                </tbody>
-            </table>
-
-             <h3>Автосервис (ТО) - Примерные цены</h3> <!-- Заголовок "примерные" - пока нет твоего фин. прайса -->
-            <table class="price-table">
-                <thead>
-                    <tr>
-                        <th>Услуга</th>
-                        <th>Цена</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Замена масла в двигателе (без стоимости масла)</td>
-                        <td>1000 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Замена масляного фильтра (без стоимости фильтра)</td>
-                        <td>700 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Замена воздушного фильтра (без стоимости фильтра)</td>
-                        <td>700 руб.</td>
-                    </tr>
-                    <tr>
-                        <td>Замена тормозных колодок (передние, без стоимости колодок)</td>
-                        <td>1200 руб./ось</td>
-                    </tr>
-                    <tr>
-                        <td>Замена тормозной жидкости (без стоимости жидкости)</td>
-                        <td>1400 руб.</td>
-                    </tr>
-                    <!-- ... полный прайс-лист автосервиса - добавь свой финальный прайс здесь -->
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <section id="contacts">
-        <div class="container">
-            <h2>Контакты</h2>
-            <div id="contacts-info">
-                <p><strong>Адрес:</strong> п. Новоасбест, микро р-н Г 50</p>
-                <p><strong>Телефон/WhatsApp:</strong> <a href="https://wa.me/79222056393">8-922-205-63-93</a></p> <!-- Ссылка на WhatsApp -->
-                <p><strong>График работы:</strong> Сб-Вс - по предварительной записи</p>
-                <!-- Можно добавить карту от Яндекс.Карты или 2ГИС  в Tilda блоке "Карта" или "HTML-код" -->
-                <p><strong>Для записи и консультаций - звоните или пишите в WhatsApp!</strong></p>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>© 2024 Шиномонтаж+Автосервис Новоасбест. Все права защищены.</p>
-        </div>
-    </footer>
+     <footer>
+    <div class="container">
+        <p>© 2025 Шиномонтаж+Автосервис Новоасбест. Все права защищены.</p>
+      <p class="developer-sign">Сайт разработан: <a href="https://t.me/praid995" target="_blank">Sergey Bulychev</a></p>
+    </div>
+</footer>
 
 </body>
 </html>
