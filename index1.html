@@ -272,6 +272,13 @@
     .autoservice-photo.увеличенное-фото {
         transform: scale(1.5); /*  Уменьшим масштаб увеличения на мобильных, чтобы помещалось в экран */
     }
+	@media (max-width: 768px) {
+  /* ... (предыдущие стили для h2, p, logo-header, contact-button, .photo-gallery, .autoservice-photo) ... */
+
+  #hero .hero-container p strong { /*  Стиль для элемента <strong> "Телефон/WhatsApp:" */
+    display: block; /* Делаем <strong> блочным элементом, чтобы номер перенесся на новую строку */
+    margin-bottom: 5px; /*  Можно добавить небольшой отступ снизу от "Телефон/WhatsApp:" */
+  }
 }
     </style>
 </head>
