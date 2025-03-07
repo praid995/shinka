@@ -252,33 +252,43 @@
     display: block; /* Сделаем кнопку блочной, чтобы она заняла всю ширину и перенеслась на новую строку под логотипом, если необходимо */
     text-align: center; /* Центрируем текст в кнопке, если сделали ее блочной */
   }
-}
+/* Медиа-запрос для мобильных экранов (ширина экрана до 768px) */
 @media (max-width: 768px) {
-  /* ... (предыдущие стили для h2, p, logo-header, contact-button) ... */
-
-  .photo-gallery {
-    display: block; /* Изменяем display с flex на block, чтобы фото располагались друг под другом на мобильных */
-    text-align: center; /* Центрируем фото по горизонтали */
-    gap: 10px; /* Уменьшим расстояние между фото, если нужно */
+  #hero h2 {
+    font-size: 1.8em;
+    line-height: 1.3em;
   }
-
+  #hero p {
+    font-size: 1em;
+  }
+  .logo-header img {
+    width: 100px;
+  }
+  .contact-button {
+    margin-left: 0;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+  }
+  .photo-gallery {
+    display: block;
+    text-align: center;
+    gap: 10px;
+  }
   .autoservice-photo {
-    width: 90%; /* Фотографии занимают 90% ширины контейнера photo-gallery на мобильных */
-    max-width: 300px; /*  Ограничим максимальную ширину фото, чтобы они не растягивались слишком сильно на больших мобильных экранах (можно подобрать значение) */
-    height: auto; /* Автоматическая высота для сохранения пропорций */
-    display: block; /*  Важно: делаем блочным элементом, чтобы ширина работала и фото располагались вертикально */
-    margin: 0 auto 10px auto; /* Центрируем по горизонтали, добавляем отступ снизу между фото */
+    width: 90%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
   }
     .autoservice-photo.увеличенное-фото {
-        transform: scale(1.5); /*  Уменьшим масштаб увеличения на мобильных, чтобы помещалось в экран */
+        transform: scale(1.5);
     }
-	@media (max-width: 768px) {
-  /* ... (предыдущие стили для h2, p, logo-header, contact-button, .photo-gallery, .autoservice-photo) ... */
-
-  #hero .hero-container p strong { /*  Стиль для элемента <strong> "Телефон/WhatsApp:" */
-    display: block; /* Делаем <strong> блочным элементом, чтобы номер перенесся на новую строку */
-    margin-bottom: 5px; /*  Можно добавить небольшой отступ снизу от "Телефон/WhatsApp:" */
-  }
+  #hero .hero-container p strong { /*  <-- Добавленный стиль для переноса строки */
+    display: block;
+    margin-bottom: 5px;
+  }	
 }
     </style>
 </head>
@@ -528,7 +538,7 @@
                 <h2>Контакты</h2>
                 <div id="contacts-info">
                     <p><strong>Адрес:</strong> п. Новоасбест, микро р-н Г 50</p>
-                    <p><strong>Телефон/WhatsApp:</strong> <a href="https://wa.me/79222056393">8-922-205-63-93</a></p>
+                    <p><strong>Телефон/WhatsApp:</strong> <a href="https://wa.me/79222056393">8-922-205-63-93</a>Александр</p>
                     <p><strong>График работы:</strong> По предварительной записи</p>
                     <p><strong>Для записи и консультаций - звоните или пишите в WhatsApp!</strong></p>
                 </div>
