@@ -29,6 +29,23 @@
             text-align: center; /* Центрирование содержимого по горизонтали */
             padding: 60px 0 40px 0; /* Верхний и нижний отступы */
         }
+		#hero {
+    background: url('tire-pattern.jpg') no-repeat center center/cover;
+    background-attachment: local; /* Добавляем фиксацию фона */
+    padding: 60px 0 0 0; /* Убираем нижний паддинг */
+}
+
+.hero-stripe {
+    background: inherit; /* Наследует фон от #hero */
+    min-height: 100px; /* Высота полосы */
+    position: relative;
+    z-index: 1;
+    margin-top: -40px; /* Поднимаем полосу вверх */
+}
+
+.hero-stripe .hero-container {
+    margin-top: 40px; /* Компенсируем отрицательный маргин */
+}
 
         .hero-container {
             background-color: rgba(255, 255, 255, 0.75); /* Белый полупрозрачный фон для всего блока hero */
@@ -535,14 +552,18 @@
 
         <section id="contacts">
             <div class="container">
-                <h2>Контакты</h2>
+                			<div class="hero-stripe">
+    <div class="hero-container">
+	<h2>Контакты</h2>
                 <div id="contacts-info">
                     <p><strong>Адрес:</strong> п. Новоасбест, микро р-н Г 50</p>
-                    <p><strong>Телефон/WhatsApp:</strong> <a href="https://wa.me/79222056393">8-922-205-63-93</a>Александр</p>
+                    <p><strong>Телефон/WhatsApp:</strong> <a href="https://wa.me/79222056393">8-922-205-63-93</a> Александр</p>
                     <p><strong>График работы:</strong> По предварительной записи</p>
                     <p><strong>Для записи и консультаций - звоните или пишите в WhatsApp!</strong></p>
                 </div>
             </div>
+
+    </div>
         </section>
 
      <footer>
