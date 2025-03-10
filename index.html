@@ -49,8 +49,11 @@
 			text-align: center;
         }
 
-        .logo-header {
-            margin-bottom: 18px;
+		.logo-header {
+			margin-bottom: 18px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
         }
 
         .logo-header img {
@@ -72,21 +75,6 @@
             line-height: 1.6em;
             color: #000;
             margin-bottom: 25px;
-        }
-
-        .contact-button {
-            background-color: white;
-            color: #333;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            display: inline-block;
-            border: 1px solid #ccc;
-            margin-top: 10px; /* Added for vertical spacing with logo */
-        }
-
-        .contact-button:hover {
-            background-color: #f0f0f0;
         }
 
         .map-widget {
@@ -209,6 +197,21 @@
             margin-top: 20px;
             margin-bottom: 20px;
         }
+
+		.contact-button {
+			background-color: white;
+			color: #333;
+			padding: 10px 20px;
+			border-radius: 5px;
+			text-decoration: none;
+			display: inline-block;
+			border: 1px solid #ccc;
+			margin-top: 10px;
+		}
+
+		.contact-button:hover {
+			background-color: #f0f0f0;
+		}
 
         .hero-image-block {
             width: 48%;
@@ -333,7 +336,6 @@
         <section id="hero">
             <div class="hero-container">
                 <div class="logo-header">
-                     <a href="#contacts" class="contact-button">Контакты</a>
                     <img src="logo.png" alt="Логотип Шиномонтаж+Автосервис">
                 </div>
 
@@ -351,6 +353,7 @@
                     </div>
                 </div>
                  <p><strong>Телефон/WhatsApp:</strong> <a href="https://wa.me/79222056393">8-922-205-63-93</a> Александр</p>
+				 <a href="#contacts" class="contact-button">Контакты</a>
             </div>
         </section>
 
@@ -380,7 +383,6 @@
                         <li>Замена тормозных колодок (передние): <strong>1200 руб./ось</strong></li>
                         <li>Замена тормозной жидкости (без стоимости жидкости): <strong>1400 руб.</strong></li>
                     </ul>
-                    <a href="#price-list">Посмотреть полный прайс-лист автосервиса</a>
                 </div>
             </div>
         </section>
@@ -526,40 +528,6 @@
                     </tbody>
                 </table>
 
-                 <h3>Автосервис (ТО) </h3>
-                <table class="price-table">
-                    <thead>
-                        <tr>
-                            <th>Услуга</th>
-                            <th>Цена</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Замена масла в двигателе (без стоимости масла)</td>
-                            <td>1000 руб.</td>
-                        </tr>
-                        <tr>
-                            <td>Замена масляного фильтра (без стоимости фильтра)</td>
-                            <td>500 руб.</td>
-                        </tr>
-                        <tr>
-                            <td>Замена воздушного фильтра (без стоимости фильтра)</td>
-                            <td>500 руб.</td>
-                        </tr>
-                        <tr>
-                            <td>Замена тормозных колодок (передние, без стоимости колодок)</td>
-                            <td>1200 руб./ось</td>
-                        </tr>
-                        <tr>
-                            <td>Замена тормозной жидкости (без стоимости жидкости)</td>
-                            <td>1400 руб.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
         <section id="contacts">
             <div class="container">
                     <div class="contacts-container">
@@ -578,7 +546,7 @@
         <footer>
             <div class="container">
                 <p>© 2025 Шиномонтаж+Автосервис Новоасбест. Все права защищены.</p>
-                <p class="developer-sign">Сайт разработан: <a href="https://t.me/praid995" target="_blank">Sergey Bulychev</a></p>
+                <p class="developer-sign">Сайт разработал: <a href="https://t.me/praid995" target="_blank">Sergey Bulychev</a></p>
             </div>
         </footer>
 
